@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: blogging-platform-api
+  datasource:
+    url: jdbc:postgresql://${POSTGRES_URL:localhost}:5432/blog
+    username: ${DATABASE_USERNAME}
+    password: ${DATABASE_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: update
