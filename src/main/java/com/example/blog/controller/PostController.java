@@ -39,7 +39,7 @@ public class PostController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Post> deletePost(@PathVariable("id") UUID id) {
+    public ResponseEntity<Void> deletePost(@PathVariable("id") UUID id) {
         postService.deletePost(id);
         return ResponseEntity.noContent().build();
     }
