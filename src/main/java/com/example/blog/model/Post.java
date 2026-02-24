@@ -1,13 +1,15 @@
 package com.example.blog.model;
 
 import jakarta.persistence.*;
+import org.springframework.hateoas.RepresentationModel;
+
 import java.time.Instant;
 import java.util.ArrayList;
 import java.util.UUID;
 
 @Entity
 @Table(name="TB_POSTS")
-public class Post {
+public class Post extends RepresentationModel<Post> {
 
     @Id
     @GeneratedValue(strategy= GenerationType.UUID)
